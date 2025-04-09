@@ -26,14 +26,7 @@ class Book:
         self.is_read = True
         return f"You have finished reading '{self.title}'!"
     
-    def reading_progress(self, current_page):
-        if current_page >= self.pages:
-            self.is_read = True
-            return f"You completed '{self.title}'!"
-        else:
-            progress = (current_page / self.pages) * 100
-            return f"You've read {progress:.1f}% of '{self.title}'. Keep going!"
-QUSEION 1 C
+    QUSEION 1 C
 # Creating objects using the Book class
 book1 = Book("To Kill a Mockingbird", "Harper Lee", "Fiction", 281)
 book2 = Book("The Great Gatsby", "F. Scott Fitzgerald", "Classic", 180)
