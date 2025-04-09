@@ -105,20 +105,25 @@ class Entity:
 # Animal subclasses
 class Dog(Entity):
     def move(self):
-        return "Running on four legs 🐕"
+         print("Running on four legs")
 
 class Fish(Entity):
     def move(self):
-        return "Swimming through water 🐟"
+        print( "Swimming through water")
 
 # Vehicle subclasses
 class Car(Entity):
     def move(self):
-        return "Driving on roads 🚗"
+        print("Driving on roads ")
+
+# Vehicle subclasses
+class Car(Entity):
+    def move(self):
+        print("Driving on roads ")
 
 class Plane(Entity):
     def move(self):
-        return "Flying in the sky ✈️"
+        print( "Flying in the sky ")
 
 # Testing polymorphism
 entities = [Dog(), Fish(), Car(), Plane()]
