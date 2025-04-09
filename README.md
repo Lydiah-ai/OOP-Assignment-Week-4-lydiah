@@ -7,7 +7,7 @@ class Book:
         self.genre = fantacy    # Genre of the book
     
     def describe(self):
-        print ("'{self.title}' is a {self.genre} book written by {self.author}.")
+        print("'{self.title}' is a {self.genre} book written by {self.author}.")
 
 QUESTION 1 B
 # Enhanced Book class
@@ -46,28 +46,34 @@ print(book3.reading_progress(443))  # Fully read
 
 QUESTION 1 D
 # Base class: Book
-class Book:
-    def __init__(self, title, author, genre, pages):
-        self.title = title
-        self.author = author
-        self.genre = genre
-        self.pages = pages
-        self.is_read = False  # Encapsulated attribute to track if the book is read
+# Base class
+class Entity:
+    def move(self):
+        pass  # Placeholder for the move method
 
-    def describe(self):
-        return f"'{self.title}' is a {self.genre} book by {self.author}, consisting of {self.pages} pages."
-    
-    def mark_as_read(self):
-        self.is_read = True
-        return f"You have finished reading '{self.title}'!"
-    
-    def reading_progress(self, current_page):
-        if current_page >= self.pages:
-            self.is_read = True
-            return f"You completed '{self.title}'!"
-        else:
-            progress = (current_page / self.pages) * 100
-            return f"You've read {progress:.1f}% of '{self.title}'. Keep it up!"
+# Animal subclasses
+class Dog(Entity):
+    def move(self):
+         print("Running on four legs")
+
+class Fish(Entity):
+    def move(self):
+        print( "Swimming through water")
+
+# Vehicle subclasses
+class Car(Entity):
+    def move(self):
+        print("Driving on roads ")
+
+class Plane(Entity):
+    def move(self):
+        print("Flying in the sky ")
+
+# Testing polymorphism
+entities = [Dog(), Fish(), Car(), Plane()]
+
+for entity in entities:
+    print(entity.move())
 
 # Subclass: EBook (inherits from Book)
 class EBook(Book):
