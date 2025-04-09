@@ -7,7 +7,7 @@ class Book:
         self.genre = fantacy    # Genre of the book
     
     def describe(self):
-        return f"'{self.title}' is a {self.genre} book written by {self.author}."
+        print ("'{self.title}' is a {self.genre} book written by {self.author}.")
 
 QUESTION 1 B
 # Enhanced Book class
